@@ -508,7 +508,8 @@ $(document).on("click",".delete_btn",function() {
 
 function getEmp(id) {
 	$.ajax({
-       url:"${APP_PATH}/emp/"+deleteBtn.attr(""),
+       <%--url:"${APP_PATH}/emp/"+deleteBtn.attr(""),--%>
+       url:"${APP_PATH}/emp/"+id,
        type:"GET",
        success:function(result) {
             var empData = result.extend.emp;
